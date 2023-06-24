@@ -1,0 +1,14 @@
+# node.js
+services/**/node_modules
+
+# IDE
+.idea
+.vs
+
+# db
+services/mongodb/data
+**/.DS_Store
+postgres/data
+
+# logs
+services/loki/data
