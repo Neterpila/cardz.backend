@@ -10,7 +10,7 @@ services:
       - keycloak
 
   postgres:
-    image: "postgres:13.2"
+    image: "postgres:15.3"
     volumes:
       - ./postgres/data:/var/lib/postgresql/data/
     ports:
@@ -21,7 +21,7 @@ services:
       - POSTGRES_DB=keycloak
 
   keycloak:
-    image: "jboss/keycloak:15.0.2"
+    image: "jboss/keycloak:16.1.1"
     depends_on:
       - postgres
     ports:

@@ -13,7 +13,7 @@ async function init() {
             publicKey = "-----BEGIN PUBLIC KEY-----\n" + response.data.public_key + "\n-----END PUBLIC KEY-----";
         })
         .catch((error) => {
-            console.error("Could not obtain public key:\n", error);
+            console.error("Could not obtain public key:\n", error.message || error);
         });
         if (!publicKey) {
             console.log("Retrying in 5 sec...");
